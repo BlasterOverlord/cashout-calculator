@@ -3,69 +3,62 @@ import { ServiceProvider } from "./types";
 export const providers: ServiceProvider[] = [
   {
     name: "bKash",
-    color: "bg-pink-600",
+    theme: {
+      bg: "bg-pink-600",
+      text: "text-pink-600",
+      border: "border-pink-500",
+      light: "bg-pink-50"
+    },
     options: [
-      {
-        method: "App",
-        rate: 1.85
+      { method: "App", rate: 1.85 },
+      { method: "USSD", rate: 1.85 },
+      { 
+        method: "PriyoAgent", 
+        rate: 1.85, 
+        tiers: [{ maxAmount: 50000, rate: 1.49 }]
       },
-      {
-        method: "USSD",
-        rate: 1.85
-      },
-      {
-        method: "PriyoAgent",
-        rate: 1.85,
-        tiers: [
-          { maxAmount: 50000, rate: 1.49 } // 1.49% up to 50k
-        ]
-      },
-      {
-        method: "ATM",
-        rate: 1.49
-      }
+      { method: "ATM", rate: 1.49 }
     ],
   },
   {
     name: "Nagad",
-    color: "bg-orange-500",
+    theme: {
+      bg: "bg-orange-500",
+      text: "text-orange-600",
+      border: "border-orange-500",
+      light: "bg-orange-50"
+    },
     options: [
-      {
-        method: "App",
-        rate: 1.299
-      },
-      {
-        method: "USSD",
-        rate: 1.50
-      },
+      { method: "App", rate: 1.299 },
+      { method: "USSD", rate: 1.50 },
     ],
   },
   {
     name: "Rocket",
-    color: "bg-purple-600",
+    theme: {
+      bg: "bg-purple-600",
+      text: "text-purple-600",
+      border: "border-purple-500",
+      light: "bg-purple-50"
+    },
     options: [
-      {
-        method: "App",
-        rate: 1.8
-      },
-      {
-        method: "ATM",
-        rate: 0.9
-      },
+      { method: "App", rate: 1.8 },
+      { method: "USSD", rate: 1.8 },
+      { method: "ATM", rate: 0.9 },
     ],
   },
   {
     name: "Upay",
-    color: "bg-blue-500",
+    theme: {
+      bg: "bg-blue-500",
+      text: "text-blue-600",
+      border: "border-blue-500",
+      light: "bg-blue-50"
+    },
     options: [
-      {
-        method: "App",
-        rate: 1.4
-      },
-      {
-        method: "ATM",
-        rate: 0.8
-      },
+      { method: "App", rate: 1.4 },
+      { method: "USSD", rate: 1.4 },
+      { method: "ATM", rate: 0.8 },
     ],
   },
 ];

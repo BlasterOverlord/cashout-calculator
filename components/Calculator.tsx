@@ -6,11 +6,32 @@ import { calculateFee } from '@/utils/calculate';
 import { ServiceProvider, PricingOption } from '@/utils/types';
 
 export default function Calculator() {
-  // State
   const [amount, setAmount] = useState<number | "">("");
   const [selectedProvider, setSelectedProvider] = useState<ServiceProvider>(providers[0]);
   const [selectedOption, setSelectedOption] = useState<PricingOption>(providers[0].options[0]);
   const [priyoUsage, setPriyoUsage] = useState<number | "">("");
+
+  // Derived State
+  const fee = (typeof amount === "number" && amount > 0)
+    ? calculateFee(amount, selectedOption, typeof priyoUsage === "number" ? priyoUsage : 0)
+    : 0;
+
+  const total = (typeof amount === "number" ? amount : 0) + fee;
+
+  // Helper: Get USSD Code based on provider
+  const getMethodLabel = (method: string, providerName: string) => {
+    if (method === "PriyoAgent") return "Priyo Agent";
+    if (method === "USSD") {
+      switch (providerName) {
+        case "bKash": return "*247#";
+        case "Nagad": return "*167#";
+        case "Rocket": return "*322#";
+        case "Upay": return "*268#";
+        default: return "USSD";
+      }
+    }
+    return method;
+  };
 
   // Handle Provider Change
   const handleProviderChange = (providerName: string) => {
@@ -21,33 +42,23 @@ export default function Calculator() {
     }
   };
 
-  // Derived State
-  const fee = (typeof amount === "number" && amount > 0)
-    ? calculateFee(amount, selectedOption, typeof priyoUsage === "number" ? priyoUsage : 0)
-    : 0;
-
-  const totalDeduction = (typeof amount === "number" ? amount : 0) + fee;
-
-  // Helper to map generic styling based on provider color
-  // We use a dynamic style object for specific colors since Tailwind arbitrary values can be tricky with dynamic strings
-  const activeColorStyle = {
-    backgroundColor: selectedProvider.color.replace('bg-', 'var(--tw-bg-opacity: 1); background-color: '), // fallback hack or just use classes logic below
-  };
-
-  // Helper to get border color based on provider
-  const getBorderColor = (provider: ServiceProvider) => {
-    if (provider.name === "bKash") return "border-pink-500 text-pink-600 bg-pink-50";
-    if (provider.name === "Nagad") return "border-orange-500 text-orange-600 bg-orange-50";
-    if (provider.name === "Rocket") return "border-purple-500 text-purple-600 bg-purple-50";
-    if (provider.name === "Upay") return "border-blue-500 text-blue-600 bg-blue-50";
-    return "border-gray-200";
+  const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    if (val === "") {
+      setAmount("");
+      return;
+    }
+    const num = parseFloat(val);
+    if (num < 0) return;
+    if (num > 999999) return;
+    setAmount(num);
   };
 
   return (
     <div className="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 font-sans">
-      
+
       {/* HEADER SECTION */}
-      <div className={`${selectedProvider.color} p-6 text-white transition-colors duration-500`}>
+      <div className={`${selectedProvider.theme.bg} p-6 text-white transition-colors duration-500`}>
         <label className="block text-xs font-bold uppercase tracking-widest opacity-80 mb-2">
           Amount to Cash Out
         </label>
@@ -56,7 +67,7 @@ export default function Calculator() {
           <input
             type="number"
             value={amount}
-            onChange={(e) => setAmount(e.target.value ? parseFloat(e.target.value) : "")}
+            onChange={handleAmountChange}
             className="w-full bg-transparent text-5xl font-bold text-white placeholder-white/40 outline-none text-center"
             placeholder="5000"
             autoFocus
@@ -65,7 +76,7 @@ export default function Calculator() {
       </div>
 
       <div className="p-6 space-y-8">
-        
+
         {/* 1. PROVIDER SELECTOR */}
         <div>
           <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">
@@ -76,11 +87,10 @@ export default function Calculator() {
               <button
                 key={p.name}
                 onClick={() => handleProviderChange(p.name)}
-                className={`flex-shrink-0 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 transform ${
-                  selectedProvider.name === p.name
-                    ? `${p.color} text-white shadow-lg scale-105`
+                className={`flex-shrink-0 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 transform ${selectedProvider.name === p.name
+                    ? `${p.theme.bg} text-white shadow-lg scale-105`
                     : "bg-gray-100 text-gray-500 hover:bg-gray-200"
-                }`}
+                  }`}
               >
                 {p.name}
               </button>
@@ -96,17 +106,18 @@ export default function Calculator() {
           <div className="grid grid-cols-2 gap-4">
             {selectedProvider.options.map((opt, idx) => {
               const isActive = selectedOption === opt;
+              const activeClasses = `${selectedProvider.theme.border} ${selectedProvider.theme.text} ${selectedProvider.theme.light}`;
+
               return (
                 <button
                   key={idx}
                   onClick={() => setSelectedOption(opt)}
-                  className={`py-3 px-4 rounded-xl text-sm font-semibold border-2 transition-all duration-200 ${
-                    isActive
-                      ? getBorderColor(selectedProvider)
+                  className={`py-3 px-4 rounded-xl text-sm font-semibold border-2 transition-all duration-200 ${isActive
+                      ? activeClasses
                       : "border-transparent bg-gray-50 text-gray-500 hover:bg-gray-100"
-                  }`}
+                    }`}
                 >
-                  {opt.method === "PriyoAgent" ? "Priyo Number" : opt.method}
+                  {getMethodLabel(opt.method, selectedProvider.name)}
                 </button>
               );
             })}
@@ -131,7 +142,7 @@ export default function Calculator() {
                 />
               </div>
               <p className="text-[10px] text-yellow-600 mt-2 leading-tight">
-                *Rate increases after 50,000 Tk usage.
+                *Priyo Agent discount is given for the first 50,000 Tk per month.
               </p>
             </div>
           </div>
@@ -145,14 +156,14 @@ export default function Calculator() {
               ৳ {fee.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
           </div>
-          
+
           <div className="flex justify-between items-end">
-            <span className="text-gray-500 font-medium">Total Deduction</span>
-            <span className={`text-2xl font-bold ${selectedProvider.name === 'bKash' ? 'text-pink-600' : selectedProvider.name === 'Nagad' ? 'text-orange-600' : 'text-blue-600'}`}>
-              ৳ {totalDeduction.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            <span className="text-gray-500 font-medium">Total</span>
+            <span className={`text-2xl font-bold ${selectedProvider.theme.text}`}>
+              ৳ {total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
           </div>
-          
+
           <p className="text-right text-xs text-gray-400 mt-2">
             Rate applied: {selectedOption.method === "PriyoAgent" ? "Tiered" : `${selectedOption.rate}%`}
           </p>

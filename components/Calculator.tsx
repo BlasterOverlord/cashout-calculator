@@ -57,7 +57,7 @@ export default function Calculator({ initialProviderName }: { initialProviderNam
   };
 
   return (
-    <div className="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 font-sans">
+    <div className="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
 
       {/* HEADER SECTION */}
       <div className={`${selectedProvider.theme.bg} p-6 text-white transition-colors duration-500`}>

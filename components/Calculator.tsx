@@ -5,10 +5,12 @@ import { providers } from '@/utils/pricingData';
 import { calculateFee } from '@/utils/calculate';
 import { ServiceProvider, PricingOption } from '@/utils/types';
 
-export default function Calculator() {
+export default function Calculator({ initialProviderName }: { initialProviderName?: string }) {
+  const defaultProvider = providers.find(p => p.name.toLowerCase() === initialProviderName?.toLowerCase()) || providers[0];
+
   const [amount, setAmount] = useState<number | "">("");
-  const [selectedProvider, setSelectedProvider] = useState<ServiceProvider>(providers[0]);
-  const [selectedOption, setSelectedOption] = useState<PricingOption>(providers[0].options[0]);
+  const [selectedProvider, setSelectedProvider] = useState<ServiceProvider>(defaultProvider);
+  const [selectedOption, setSelectedOption] = useState<PricingOption>(defaultProvider.options[0]);
   const [priyoUsage, setPriyoUsage] = useState<number | "">("");
 
   // Derived State

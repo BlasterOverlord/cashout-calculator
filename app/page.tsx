@@ -55,6 +55,11 @@ export default function Home() {
                   <td className="p-3">18.00 Tk</td>
                   <td className="p-3">18.00 Tk</td>
                 </tr>
+                <tr>
+                  <td className="p-3 font-semibold text-blue-600">Upay</td>
+                  <td className="p-3">14.00 Tk</td>
+                  <td className="p-3">14.00 Tk</td>
+                </tr>
               </tbody>
             </table>
           </div>

@@ -1,20 +1,73 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cash out calculator",
-  description: "Cashout charge calculator for online banking services like bkash, nagad, etc.",
+  title: {
+    default: "BD Cash Out Charge Calculator 2025 | bKash, Nagad, Rocket, Upay",
+    template: "%s | Cash Out BD"
+  },
+  description: "Calculate exact cash out charges for bKash, Nagad, Rocket, and Upay. Includes Priyo Agent rates, App vs USSD, and ATM fees.",
+  keywords: [
+    "bkash charge calculator",
+    "nagad cash out charge",
+    "rocket cash out fee",
+    "upay withdrawal charge",
+    "bkash priyo number limit",
+    "mobile banking charges bangladesh 2025",
+    "cash out calculator bd",
+    "bkash vs nagad charges"
+  ],
+  openGraph: {
+    title: "BD Cash Out Charge Calculator",
+    description: "Check exactly how much money you will lose before cashing out.",
+    type: "website",
+  },
+  verification: {
+    google: "google-site-verification-code-goes-here",
+  },
+};
+
+// JSON-LD Schema Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "BD Cash Out Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BDT"
+      },
+      "description": "Instant calculator for bKash, Nagad, Rocket and Upay cash out charges including Priyo numbers."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the bKash Priyo Agent charge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a Priyo Agent, the charge is 1.49% (14.90 Tk per 1,000) up to a monthly limit of 50,000 Tk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is cheaper: bKash or Nagad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Currently, Nagad App is cheaper at approx 1.30% compared to bKash's standard 1.85%."
+          }
+        }
+      ]
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -24,9 +77,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={inter.className}>
+        {/* Inject Schema here */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>

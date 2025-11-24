@@ -1,6 +1,10 @@
 import HomeButton from "@/components/HomeButton";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "Contact Us | CashOutCalc.tech",
+};
+
 export default function Contact() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-12 font-sans text-gray-800">

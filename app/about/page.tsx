@@ -2,6 +2,10 @@ import Link from "next/link";
 import HomeButton from "@/components/HomeButton";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: "About Us | CashOutCalc.tech",
+};
+
 export default function About() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-12 text-gray-800">

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Calculator from '@/components/Calculator';
 import { providers } from '@/utils/pricingData';
 import HomeButton from '@/components/HomeButton';
+import Footer from '@/components/Footer';
 
 // 1. Define params as a Promise (Next.js 15+ Requirement)
 interface Props {
@@ -75,14 +76,12 @@ export default async function ProviderPage({ params }: Props) {
 				</div>
 			</section>
 
-			<footer className="text-center py-8 text-gray-400 text-sm bg-white border-t border-gray-100">
-				<p>© 2025 BD Cash Out Calculator.</p>
-			</footer>
+			<Footer />
 		</main>
 	);
 }
 
-// 5. STATIC PARAMS (Keep this, it works great)
+// 5. STATIC PARAMS GENERATION
 export async function generateStaticParams() {
 	return providers.map((provider) => ({
 		provider: provider.name.toLowerCase(),

@@ -1,4 +1,6 @@
 import Calculator from '@/components/Calculator';
+import Footer from '@/components/Footer';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -106,24 +108,22 @@ export default function Home() {
           Browse by Provider
         </h3>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="/bkash" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-pink-500 hover:text-pink-600 transition">
+          <Link href="/bkash" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-pink-500 hover:text-pink-600 transition">
             bKash Calculator
-          </a>
-          <a href="/nagad" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-orange-500 hover:text-orange-600 transition">
+          </Link>
+          <Link href="/nagad" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-orange-500 hover:text-orange-600 transition">
             Nagad Calculator
-          </a>
-          <a href="/rocket" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-purple-500 hover:text-purple-600 transition">
+          </Link>
+          <Link href="/rocket" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-purple-500 hover:text-purple-600 transition">
             Rocket Calculator
-          </a>
-          <a href="/upay" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-blue-500 hover:text-blue-600 transition">
+          </Link>
+          <Link href="/upay" className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 hover:border-blue-500 hover:text-blue-600 transition">
             Upay Calculator
-          </a>
+          </Link>
         </div>
       </section>
-
-      <footer className="text-center py-8 text-gray-400 text-sm bg-white border-t border-gray-100">
-        <p>© 2025 BD Cash Out Calculator. Not affiliated with bKash, Nagad, Rocket, or Upay.</p>
-      </footer>
+      
+      <Footer />
     </main>
   );
 }

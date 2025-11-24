@@ -1,8 +1,11 @@
 import Link from "next/link";
+import HomeButton from "@/components/HomeButton";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-12 text-gray-800">
+      <HomeButton />
       <h1 className="text-3xl font-bold mb-6">About Us</h1>
       <p className="mb-4">
         Welcome to <strong>Cash Out Calculator</strong>, your number one source for accurate Mobile Financial Service (MFS) fee calculations in Bangladesh.
@@ -22,6 +25,7 @@ export default function About() {
         </Link>
         .
       </p>
+      <Footer />
     </main>
   );
 }

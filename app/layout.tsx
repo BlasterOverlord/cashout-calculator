@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     description: "Calculate exact cash out charges for bKash, Nagad, Rocket, and Upay in Bangladesh.",
     type: "website",
   },
-  verification: {
-    google: "google-site-verification-code-goes-here",
-  },
+  // verification: {
+  //   google: "google-site-verification-code-goes-here",
+  // },
 };
 
 // JSON-LD Schema Data

@@ -1,6 +1,6 @@
 # 💸 BD Cash Out Calculator
 
-[Live Demo](https://bdcashout.me) • Progressive Web App (PWA) for accurately computing Bangladeshi Mobile Financial Service (MFS) cash‑out fees.
+[Live Demo](https://cashoutcalc.tech/) • Progressive Web App (PWA) for accurately computing Bangladeshi Mobile Financial Service (MFS) cash‑out fees.
 
 > Traditional calculators still assume a flat 1.85%. This app implements current tiered and contextual fee rules (e.g., bKash Priyo Agent limits, Nagad channel differences, ATM withdrawal variability) to produce precise, explainable results.
 

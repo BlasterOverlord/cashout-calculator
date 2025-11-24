@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://cashoutcharge.com/sitemap.xml', // Change this to actual domain
+    sitemap: 'https://cashoutcalc.tech/sitemap.xml',
   }
 }

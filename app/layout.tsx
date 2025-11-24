@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "BD Cash Out Charge Calculator",
-    description: "Check exactly how much money you will lose before cashing out.",
+    description: "Calculate exact cash out charges for bKash, Nagad, Rocket, and Upay in Bangladesh.",
     type: "website",
   },
   verification: {

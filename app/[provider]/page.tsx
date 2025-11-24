@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		title: `${provider.name} Cash Out Charge Calculator 2025`,
 		description: `Calculate the exact cash out fee for ${provider.name} App and USSD. Check Priyo numbers, ATM charges, and monthly limits instantly.`,
 		alternates: {
-			canonical: `https://cashoutcharge.com/${resolvedParams.provider.toLowerCase()}`,
+			canonical: `https://cashoutcalc.tech/${resolvedParams.provider.toLowerCase()}`,
 		}
 	};
 }
@@ -73,6 +73,12 @@ export default async function ProviderPage({ params }: Props) {
 						Calculating {provider.name} charges manually is difficult because of different rates for App, USSD, and ATMs.
 						This tool helps you find the exact amount deducted from your balance.
 					</p>
+					<ul className="list-disc pl-5 space-y-2 text-sm mt-2">
+						<li>Check {provider.name} <strong>App vs USSD</strong> rates instantly.</li>
+						<li>Calculate <strong>Priyo Agent</strong> discounts (if applicable).</li>
+						<li>See the total deduction needed for your <strong>Cash Out</strong>.</li>
+						<li>Updated for <strong>2025 fees</strong> and limits.</li>
+					</ul>
 				</div>
 			</section>
 

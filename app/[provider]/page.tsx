@@ -28,11 +28,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		};
 	}
 
+	const pageUrl = `https://cashoutcalc.tech/${resolvedParams.provider.toLowerCase()}`;
+
 	return {
 		title: `${provider.name} Cash Out Charge Calculator 2025`,
 		description: `Calculate the exact cash out fee for ${provider.name} App and USSD. Check Priyo numbers, ATM charges, and monthly limits instantly.`,
 		alternates: {
-			canonical: `https://cashoutcalc.tech/${resolvedParams.provider.toLowerCase()}`,
+			canonical: pageUrl,
+		},
+		openGraph: {
+			title: `${provider.name} Cash Out Calculator`,
+			description: `Calculate exact cash out charges for ${provider.name} in Bangladesh.`,
+			type: "website",
+			url: pageUrl,
 		}
 	};
 }
@@ -45,9 +53,24 @@ export default async function ProviderPage({ params }: Props) {
 	if (!provider) {
 		notFound();
 	}
+	const pageUrl = `https://cashoutcalc.tech/${resolvedParams.provider.toLowerCase()}`;
 
 	return (
 		<main className="min-h-screen bg-gray-50">
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "WebApplication",
+						"name": `${provider.name} Cash Out Calculator`,
+						"url": pageUrl,
+						"applicationCategory": "FinanceApplication",
+						"operatingSystem": "Any",
+						"description": `Calculate ${provider.name} cash out charges for Bangladesh.`
+					})
+				}}
+			/>
 			<HomeButton />
 			{/* Hero Section */}
 			<section className="flex flex-col items-center justify-center pt-12 pb-8 px-4">

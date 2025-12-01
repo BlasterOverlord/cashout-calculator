@@ -2,9 +2,56 @@ import Calculator from '@/components/Calculator';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 
+// JSON-LD Schema Data
+const baseUrl = 'https://cashoutcalc.tech';
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "BD Cash Out Calculator",
+      "url": baseUrl,
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BDT"
+      },
+      "description": "Instant calculator for bKash, Nagad, Rocket and Upay cash out charges including Priyo numbers."
+    },
+    {
+      "@type": "FAQPage",
+      "url": baseUrl,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much is the bKash Priyo Agent charge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a Priyo Agent, the charge is 1.49% (14.90 Tk per 1,000) up to a monthly limit of 50,000 Tk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is cheaper: bKash or Nagad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Currently, Nagad App is cheaper at approx 1.30% compared to bKash's standard 1.85%."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* HERO SECTION: Calculator */}
       <section className="flex flex-col items-center justify-center pt-12 pb-8 px-4">
@@ -122,7 +169,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      
+
       <Footer />
     </main>
   );

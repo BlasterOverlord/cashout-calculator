@@ -5,6 +5,7 @@ import Calculator from '@/components/Calculator';
 import { providers } from '@/utils/pricingData';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
+import Link from 'next/link';
 
 // 1. Define params as a Promise (Next.js 15+ Requirement)
 interface Props {
@@ -103,7 +104,56 @@ export default async function ProviderPage({ params }: Props) {
 						<li>Updated for <strong>2025 fees</strong> and limits.</li>
 					</ul>
 				</div>
+				<article className="prose prose-blue max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+					<h2 className="text-2xl font-bold text-gray-900">Analyzing {provider.name} Cash Out Charges</h2>
+					<p className="leading-relaxed">
+						<strong>{provider.name}</strong> remains a dominant player in Bangladesh&apos;s financial ecosystem. However, users often struggle to calculate the exact deduction amount due to the variance between Agent and ATM withdrawal fees.
+					</p>
+
+					<h3 className="text-xl font-semibold text-gray-800 mt-6">Strategic Withdrawal Planning</h3>
+					<p>
+						To minimize fees with {provider.name}, it is crucial to track your monthly usage.
+						{provider.name === 'bKash' && " Specifically for bKash, utilizing the Priyo Agent limit of 50,000 Tk is the most effective saving strategy, reducing fees from 18.50 Tk to 14.90 Tk per thousand."}
+						{provider.name === 'Nagad' && " For Nagad users, the App rate provides a distinct advantage over USSD, making smartphone usage highly incentivized."}
+						{provider.name === 'Rocket' && " Rocket users should prioritize Dutch-Bangla Bank ATMs where available, as the 0.9% rate is significantly lower than agent withdrawals."}
+					</p>
+
+					<h3 className="text-xl font-semibold text-gray-800 mt-6">Regulatory Limits</h3>
+					<p>
+						Adhering to Bangladesh Bank regulations, {provider.name} enforces daily and monthly ceilings on cash-out transactions. While this calculator ensures you have the correct balance for fees, always ensure your transaction volume stays within the 30,000 Tk daily (personal) limit to avoid transaction failures at the agent point.
+					</p>
+				</article>
 			</section>
+
+			<div className="max-w-3xl mx-auto px-6 pb-12">
+				<h3 className="text-center text-sm font-semibold text-gray-400 mb-4 uppercase">
+					Compare with Other Providers
+				</h3>
+				<div className="flex flex-wrap justify-center gap-4">
+					{providers
+						.filter(p => p.name !== provider.name)
+						.map(p => {
+							// Map provider names to their hover classes
+							const hoverClass = 
+								p.name === 'bKash' ? 'hover:border-pink-500 hover:text-pink-600' :
+								p.name === 'Nagad' ? 'hover:border-orange-500 hover:text-orange-600' :
+								p.name === 'Rocket' ? 'hover:border-purple-500 hover:text-purple-600' :
+								p.name === 'Upay' ? 'hover:border-blue-500 hover:text-blue-600' :
+								'hover:border-gray-400';
+							
+							return (
+								<Link
+									key={p.name}
+									href={`/${p.name.toLowerCase()}`}
+									className={`px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600 transition ${hoverClass}`}
+								>
+									{p.name} Calculator
+								</Link>
+							);
+						})
+					}
+				</div>
+			</div>
 
 			<Footer />
 		</main>

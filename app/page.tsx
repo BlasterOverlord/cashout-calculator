@@ -68,6 +68,30 @@ export default function Home() {
         <Calculator />
       </section>
 
+      <section className="max-w-3xl mx-auto px-6 pt-12 space-y-8 text-gray-700">
+        <div className="prose prose-blue max-w-none">
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Complete Guide to MFS Cash Out Charges in Bangladesh (2025)</h2>
+          <p className="text-lg leading-relaxed">
+            As we move through 2025, managing mobile financial service (MFS) costs in Bangladesh has become essential for daily financial planning. Whether you use <strong>bKash, Nagad, Rocket, or Upay</strong>, understanding the hidden layers of withdrawal fees can save you thousands of Taka annually.
+          </p>
+          <br></br>
+          <h3 className="text-xl font-bold text-gray-800">The Evolution of Cash Out Fees</h3>
+          <p>
+            Gone are the days of a flat 1.85% fee across the board. Providers have introduced complex tiered pricing models to compete. For instance, bKash&apos;s <strong>&quot;Priyo Agent&quot;</strong> feature allows for a significantly reduced rate of 1.49% (14.90 Tk per 1,000), but this is strictly capped at a monthly limit. Our calculator is the first of its kind to factor in these &quot;split-tier&quot; scenarios, calculating exactly how much of your withdrawal falls under the cheap rate and how much spills over into the standard rate.
+          </p>
+          <br></br>
+          <h3 className="text-xl font-bold text-gray-800">App vs. USSD: The Cost of Convenience</h3>
+          <p>
+            A critical factor often overlooked is the method of withdrawal. Digital savvy users who utilize the official apps often enjoy lower rates (e.g., Nagad&apos;s ~1.29% App rate) compared to those using USSD codes (*247#, *167#). This disparity is designed to encourage smartphone adoption, but it can penalize users on feature phones. This tool provides a transparent comparison between App and USSD charges for every major provider.
+          </p>
+          <br></br>
+          <h3 className="text-xl font-bold text-gray-800">ATM Withdrawals: The Hidden Saver</h3>
+          <p>
+            For users with access to partner ATMs (such as BRAC Bank for bKash or Dutch-Bangla Bank for Rocket), cashing out via ATM is often the most cost-effective method, with rates dropping as low as 0.9% or 1.49%. However, ATM availability is lower in rural areas, making agent points the primary, albeit more expensive, option for many.
+          </p>
+        </div>
+      </section>
+
       {/* SEO CONTENT SECTION */}
       <section className="max-w-3xl mx-auto px-6 py-12 space-y-12 text-gray-700">
 

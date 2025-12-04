@@ -23,4 +23,10 @@ export interface ServiceProvider {
   name: string;
   theme: ProviderTheme;
   options: PricingOption[];
+  
+  // SEO & Content Fields
+  seoTitle: string;
+  description: string;
+  uniqueFeatures: string[];
+  verdict: string;
 }

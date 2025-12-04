@@ -32,14 +32,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const pageUrl = `https://cashoutcalc.tech/${resolvedParams.provider.toLowerCase()}`;
 
 	return {
-		title: `${provider.name} Cash Out Charge Calculator 2025`,
-		description: `Calculate the exact cash out fee for ${provider.name} App and USSD. Check Priyo numbers, ATM charges, and monthly limits instantly.`,
+		title: provider.seoTitle || `${provider.name} Cash Out Charge Calculator 2025`,
+		description: provider.description || `Calculate the exact cash out fee for ${provider.name} App and USSD. Check Priyo numbers, ATM charges, and monthly limits instantly.`,
 		alternates: {
 			canonical: pageUrl,
 		},
 		openGraph: {
-			title: `${provider.name} Cash Out Calculator`,
-			description: `Calculate exact cash out charges for ${provider.name} in Bangladesh.`,
+			title: provider.seoTitle || `${provider.name} Cash Out Calculator`,
+			description: provider.description || `Calculate exact cash out charges for ${provider.name} in Bangladesh.`,
 			type: "website",
 			url: pageUrl,
 		}
@@ -56,6 +56,9 @@ export default async function ProviderPage({ params }: Props) {
 	}
 	const pageUrl = `https://cashoutcalc.tech/${resolvedParams.provider.toLowerCase()}`;
 
+	// Clean up markdown from features for Schema
+	const cleanFeatures = provider.uniqueFeatures?.map(f => f.replace(/\*\*/g, '')).join(', ');
+
 	return (
 		<main className="min-h-screen bg-gray-50">
 			<script
@@ -68,7 +71,13 @@ export default async function ProviderPage({ params }: Props) {
 						"url": pageUrl,
 						"applicationCategory": "FinanceApplication",
 						"operatingSystem": "Any",
-						"description": `Calculate ${provider.name} cash out charges for Bangladesh.`
+						"description": provider.description || `Calculate ${provider.name} cash out charges for Bangladesh.`,
+						"offers": {
+							"@type": "Offer",
+							"price": "0",
+							"priceCurrency": "BDT"
+						},
+						"featureList": cleanFeatures || "Calculate App and USSD charges"
 					})
 				}}
 			/>
@@ -93,34 +102,33 @@ export default async function ProviderPage({ params }: Props) {
 			<section className="max-w-3xl mx-auto px-6 py-12 space-y-8 text-gray-700">
 				<div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
 					<h2 className="text-2xl font-bold text-gray-900 mb-4">Why use this {provider.name} Calculator?</h2>
-					<p>
-						Calculating {provider.name} charges manually is difficult because of different rates for App, USSD, and ATMs.
-						This tool helps you find the exact amount deducted from your balance.
+					<p className="mb-4 text-lg leading-relaxed">
+						{provider.description}
 					</p>
-					<ul className="list-disc pl-5 space-y-2 text-sm mt-2">
-						<li>Check {provider.name} <strong>App vs USSD</strong> rates instantly.</li>
-						<li>Calculate <strong>Priyo Agent</strong> discounts (if applicable).</li>
-						<li>See the total deduction needed for your <strong>Cash Out</strong>.</li>
-						<li>Updated for <strong>2025 fees</strong> and limits.</li>
+					<h3 className="font-semibold text-gray-900 mb-3">Key Features & Benefits:</h3>
+					<ul className="space-y-3 text-gray-700">
+						{provider.uniqueFeatures?.map((feature, i) => (
+							<li key={i} className="flex gap-3">
+								<span className={`mt-1 min-w-[20px] font-bold ${provider.theme.text}`}>✓</span>
+								<span>
+									{feature.split('**').map((part, index) => 
+										index % 2 === 1 ? <strong key={index} className="text-gray-900">{part}</strong> : part
+									)}
+								</span>
+							</li>
+						))}
 					</ul>
 				</div>
+
 				<article className="prose prose-blue max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-					<h2 className="text-2xl font-bold text-gray-900">Analyzing {provider.name} Cash Out Charges</h2>
-					<p className="leading-relaxed">
-						<strong>{provider.name}</strong> remains a dominant player in Bangladesh&apos;s financial ecosystem. However, users often struggle to calculate the exact deduction amount due to the variance between Agent and ATM withdrawal fees.
+					<h2 className="text-2xl font-bold text-gray-900">Our Verdict on {provider.name}</h2>
+					<p className="leading-relaxed text-lg">
+						{provider.verdict}
 					</p>
 
-					<h3 className="text-xl font-semibold text-gray-800 mt-6">Strategic Withdrawal Planning</h3>
+					<h3 className="text-xl font-semibold text-gray-800 mt-6">Regulatory Limits (2025)</h3>
 					<p>
-						To minimize fees with {provider.name}, it is crucial to track your monthly usage.
-						{provider.name === 'bKash' && " Specifically for bKash, utilizing the Priyo Agent limit of 50,000 Tk is the most effective saving strategy, reducing fees from 18.50 Tk to 14.90 Tk per thousand."}
-						{provider.name === 'Nagad' && " For Nagad users, the App rate provides a distinct advantage over USSD, making smartphone usage highly incentivized."}
-						{provider.name === 'Rocket' && " Rocket users should prioritize Dutch-Bangla Bank ATMs where available, as the 0.9% rate is significantly lower than agent withdrawals."}
-					</p>
-
-					<h3 className="text-xl font-semibold text-gray-800 mt-6">Regulatory Limits</h3>
-					<p>
-						Adhering to Bangladesh Bank regulations, {provider.name} enforces daily and monthly ceilings on cash-out transactions. While this calculator ensures you have the correct balance for fees, always ensure your transaction volume stays within the 30,000 Tk daily (personal) limit to avoid transaction failures at the agent point.
+						Adhering to Bangladesh Bank regulations, {provider.name} enforces daily and monthly ceilings on cash-out transactions. While this calculator ensures you have the correct balance for fees, always ensure your transaction volume stays within the <strong>30,000 Tk daily</strong> (personal) limit to avoid transaction failures at the agent point.
 					</p>
 				</article>
 			</section>

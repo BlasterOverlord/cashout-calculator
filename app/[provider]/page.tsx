@@ -82,8 +82,16 @@ export default async function ProviderPage({ params }: Props) {
 				}}
 			/>
 			<HomeButton />
+
+			{/* Breadcrumb Navigation */}
+			<nav className="max-w-3xl mx-auto px-6 pt-6 text-sm text-gray-500">
+				<Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+				<span className="mx-2">/</span>
+				<span className="font-medium text-gray-900">{provider.name}</span>
+			</nav>
+
 			{/* Hero Section */}
-			<section className="flex flex-col items-center justify-center pt-12 pb-8 px-4">
+			<section className="flex flex-col items-center justify-center pt-6 pb-8 px-4">
 				<div className="text-center mb-8">
 					<h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
 						<span className={provider.theme.text}>{provider.name}</span> Cash Out Charge

@@ -10,6 +10,14 @@ export default function About() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-12 text-gray-800">
       <HomeButton />
+      
+      {/* Breadcrumb Navigation */}
+      <nav className="mb-8 text-sm text-gray-500">
+        <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+        <span className="mx-2">/</span>
+        <span className="font-medium text-gray-900">About Us</span>
+      </nav>
+
       <h1 className="text-3xl font-bold mb-6">About Us</h1>
       
       <section className="mb-8">

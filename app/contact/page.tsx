@@ -1,5 +1,6 @@
 import HomeButton from "@/components/HomeButton";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export const metadata = {
   title: "Contact Us | CashOutCalc.tech",
@@ -9,6 +10,14 @@ export default function Contact() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-12 font-sans text-gray-800">
       <HomeButton />
+
+      {/* Breadcrumb Navigation */}
+      <nav className="mb-8 text-sm text-gray-500">
+        <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
+        <span className="mx-2">/</span>
+        <span className="font-medium text-gray-900">Contact</span>
+      </nav>
+
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
       <p className="mb-6 text-lg leading-relaxed">
         We value your feedback! Whether you've found a bug, have a feature suggestion, or want to report incorrect data, we're here to listen. This project relies on community input to stay accurate and useful.

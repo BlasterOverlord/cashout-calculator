@@ -54,9 +54,18 @@ export default function BlogPost() {
           <p className="text-lg leading-relaxed mb-6">
             Choosing the right Mobile Financial Service (MFS) in Bangladesh used to be simple: everyone used bKash. But in 2025, the landscape has changed. <strong>Nagad</strong> has captured millions of users with lower fees, <strong>Rocket</strong> remains the king of ATM withdrawals, and <strong>Upay</strong> is offering the lowest rates in the market.
           </p>
-          <p className="text-lg leading-relaxed mb-8">
+          <p className="text-lg leading-relaxed mb-6">
             So, which one should you use? The answer depends entirely on <em>how</em> you cash out. Let&apos;s break down the pros and cons of each major provider.
           </p>
+
+          <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-8 rounded-r-lg">
+            <p className="text-blue-900">
+              <strong>Quick Check:</strong> Want to see the exact fee for your amount? 
+              <Link href="/" className="text-blue-700 font-bold underline ml-1 hover:text-blue-900">
+                Use our Cash Out Calculator to calculate instantly.
+              </Link>
+            </p>
+          </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. bKash: The Reliable Giant</h2>
           <p className="mb-4">

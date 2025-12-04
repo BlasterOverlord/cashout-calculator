@@ -1,6 +1,7 @@
 import Link from "next/link";
 import HomeButton from "@/components/HomeButton";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "About Us | CashOutCalc.tech",
@@ -12,11 +13,7 @@ export default function About() {
       <HomeButton />
       
       {/* Breadcrumb Navigation */}
-      <nav className="mb-8 text-sm text-gray-500">
-        <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-        <span className="mx-2">/</span>
-        <span className="font-medium text-gray-900">About Us</span>
-      </nav>
+      <Breadcrumbs items={[{ label: 'About Us' }]} className="mb-8" />
 
       <h1 className="text-3xl font-bold mb-6">About Us</h1>
       

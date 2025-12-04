@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
   title: "Blog | CashOutCalc.tech",
@@ -9,11 +10,11 @@ export const metadata = {
 
 const blogPosts = [
   {
-    slug: "bkash-vs-nagad-vs-rocket-2025",
-    title: "bKash vs Nagad vs Rocket: Which is Best in 2025?",
+    slug: "bkash-vs-nagad-vs-rocket-vs-upay-2025",
+    title: "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2025?",
     excerpt: "A complete comparison of cash out charges, limits, and features to help you decide which MFS provider saves you the most money.",
     date: "December 5, 2025",
-    readTime: "5 min read"
+    readTime: "6 min read"
   },
   {
     slug: "how-to-save-on-cash-out-charges",
@@ -38,11 +39,7 @@ export default function BlogIndex() {
       
       <div className="flex-grow max-w-4xl mx-auto px-6 py-12 md:py-20 font-sans text-gray-800">
         {/* Breadcrumb */}
-        <nav className="mb-8 text-sm text-gray-500">
-          <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <span className="font-medium text-gray-900">Blog</span>
-        </nav>
+        <Breadcrumbs items={[{ label: 'Blog' }]} className="mb-8" />
 
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Latest Guides & Tips</h1>

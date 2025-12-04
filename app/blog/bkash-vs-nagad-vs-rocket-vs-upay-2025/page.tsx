@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-  title: "bKash vs Nagad vs Rocket: Which is Best in 2025? | CashOutCalc",
+  title: "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2025? | CashOutCalc",
   description: "A detailed comparison of bKash, Nagad, Rocket, and Upay cash out charges, limits, and features. Find out which MFS provider is right for you in 2025.",
 };
 
@@ -11,7 +12,7 @@ export default function BlogPost() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "bKash vs Nagad vs Rocket: Which is Best in 2025?",
+    "headline": "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2025?",
     "datePublished": "2025-12-05",
     "author": {
       "@type": "Organization",
@@ -30,22 +31,22 @@ export default function BlogPost() {
       
       <article className="flex-grow max-w-3xl mx-auto px-6 py-12 md:py-20 font-sans text-gray-800">
         {/* Breadcrumb */}
-        <nav className="mb-8 text-sm text-gray-500">
-          <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-blue-600 transition-colors">Blog</Link>
-          <span className="mx-2">/</span>
-          <span className="font-medium text-gray-900">bKash vs Nagad vs Rocket</span>
-        </nav>
+        <Breadcrumbs 
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: 'bKash vs Nagad vs Rocket vs Upay' }
+          ]} 
+          className="mb-8" 
+        />
 
         <header className="mb-10">
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            bKash vs Nagad vs Rocket: Which is Best in 2025?
+            bKash vs Nagad vs Rocket vs Upay: Which is Best in 2025?
           </h1>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <span>December 5, 2025</span>
             <span>•</span>
-            <span>5 min read</span>
+            <span>6 min read</span>
           </div>
         </header>
 
@@ -94,6 +95,19 @@ export default function BlogPost() {
           </ul>
           <p className="mb-6 bg-purple-50 p-4 rounded-lg border border-purple-100 text-sm">
             <strong>Verdict:</strong> Unbeatable if you live or work near a DBBL ATM.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Upay: The Lowest Rate Challenger</h2>
+          <p className="mb-4">
+            Upay, backed by UCB (United Commercial Bank), is the newest major player. They are aggressively competing on price, offering the absolute lowest ATM withdrawal fee in the industry.
+          </p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li><strong>Agent Charge:</strong> 1.40% (14 Tk per 1,000) via App.</li>
+            <li><strong>ATM Charge:</strong> <span className="font-semibold text-blue-600">0.8%</span> (8 Tk per 1,000) at UCB ATMs.</li>
+            <li><strong>Best Feature:</strong> No hidden conditions. Their standard rates are simply lower than the competition.</li>
+          </ul>
+          <p className="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-100 text-sm">
+            <strong>Verdict:</strong> The absolute cheapest option if you have access to UCB ATMs. 8 Tk per thousand is unbeatable.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Comparison Summary</h2>

@@ -6,6 +6,7 @@ import { providers } from '@/utils/pricingData';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 // 1. Define params as a Promise (Next.js 15+ Requirement)
 interface Props {
@@ -84,11 +85,9 @@ export default async function ProviderPage({ params }: Props) {
 			<HomeButton />
 
 			{/* Breadcrumb Navigation */}
-			<nav className="max-w-3xl mx-auto px-6 pt-6 text-sm text-gray-500">
-				<Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-				<span className="mx-2">/</span>
-				<span className="font-medium text-gray-900">{provider.name}</span>
-			</nav>
+			<div className="max-w-3xl mx-auto px-6 pt-6">
+				<Breadcrumbs items={[{ label: provider.name }]} />
+			</div>
 
 			{/* Hero Section */}
 			<section className="flex flex-col items-center justify-center pt-6 pb-8 px-4">

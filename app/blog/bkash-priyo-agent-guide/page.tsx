@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
   title: "bKash Priyo Agent Guide 2025: How to Set & Save | CashOutCalc",
@@ -30,13 +31,13 @@ export default function BlogPost() {
       
       <article className="flex-grow max-w-3xl mx-auto px-6 py-12 md:py-20 font-sans text-gray-800">
         {/* Breadcrumb */}
-        <nav className="mb-8 text-sm text-gray-500">
-          <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-          <span className="mx-2">/</span>
-          <Link href="/blog" className="hover:text-blue-600 transition-colors">Blog</Link>
-          <span className="mx-2">/</span>
-          <span className="font-medium text-gray-900">bKash Priyo Agent Guide</span>
-        </nav>
+        <Breadcrumbs 
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: 'bKash Priyo Agent Guide' }
+          ]} 
+          className="mb-8" 
+        />
 
         <header className="mb-10">
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">

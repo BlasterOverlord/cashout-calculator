@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import HomeButton from "@/components/HomeButton";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "Terms of Service | CashOutCalc.tech",
@@ -13,11 +14,7 @@ export default function Terms() {
       
       <div className="flex-grow max-w-3xl mx-auto px-6 py-12 md:py-20 font-sans text-gray-800">
         {/* Breadcrumb Navigation */}
-        <nav className="mb-8 text-sm text-gray-500">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
-            <span className="mx-2">/</span>
-            <span className="font-medium text-gray-900">Terms of Service</span>
-        </nav>
+        <Breadcrumbs items={[{ label: 'Terms of Service' }]} className="mb-8" />
 
         <h1 className="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900">Terms of Service</h1>
         <div className="prose prose-blue max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">

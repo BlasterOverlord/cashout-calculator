@@ -6,6 +6,9 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata = {
   title: "Blog | CashOutCalc.tech",
   description: "Latest guides, comparisons, and tips for Mobile Financial Services (bKash, Nagad, Rocket, Upay) in Bangladesh.",
+  alternates: {
+    canonical: 'https://cashoutcalc.tech/blog',
+  },
 };
 
 const blogPosts = [

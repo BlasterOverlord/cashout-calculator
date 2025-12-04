@@ -6,6 +6,9 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata = {
   title: "5 Proven Ways to Save Money on Cash Out Charges | CashOutCalc",
   description: "Stop paying high fees. Learn how to use Priyo numbers, ATMs, and Apps to cut your mobile banking withdrawal fees by up to 50%.",
+  alternates: {
+    canonical: 'https://cashoutcalc.tech/blog/how-to-save-on-cash-out-charges',
+  },
 };
 
 export default function BlogPost() {

@@ -1,10 +1,12 @@
 import HomeButton from "@/components/HomeButton";
 import Footer from "@/components/Footer";
-import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "Contact Us | CashOutCalc.tech",
+  alternates: {
+    canonical: 'https://cashoutcalc.tech/contact',
+  },
 };
 
 export default function Contact() {
@@ -17,7 +19,7 @@ export default function Contact() {
 
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
       <p className="mb-6 text-lg leading-relaxed">
-        We value your feedback! Whether you've found a bug, have a feature suggestion, or want to report incorrect data, we're here to listen. This project relies on community input to stay accurate and useful.
+        We value your feedback! Whether you&apos;ve found a bug, have a feature suggestion, or want to report incorrect data, we&apos;re here to listen. This project relies on community input to stay accurate and useful.
       </p>
       
       <div className="grid md:grid-cols-2 gap-6 mb-8">

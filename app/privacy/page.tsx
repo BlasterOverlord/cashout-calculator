@@ -6,6 +6,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 export const metadata = {
     title: "Privacy Policy | CashOutCalc.tech",
     description: "Privacy policy and data usage for CashOutCalc.tech",
+    alternates: {
+        canonical: 'https://cashoutcalc.tech/privacy',
+    },
 };
 
 export default function Privacy() {

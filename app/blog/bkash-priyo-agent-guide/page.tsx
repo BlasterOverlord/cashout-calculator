@@ -6,6 +6,9 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata = {
   title: "bKash Priyo Agent Guide 2025: How to Set & Save | CashOutCalc",
   description: "Step-by-step guide to setting up a bKash Priyo Agent number. Learn how to reduce your cash out charge to 1.49% and save money every month.",
+  alternates: {
+    canonical: 'https://cashoutcalc.tech/blog/bkash-priyo-agent-guide',
+  },
 };
 
 export default function BlogPost() {

@@ -6,6 +6,9 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata = {
   title: "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2025? | CashOutCalc",
   description: "A detailed comparison of bKash, Nagad, Rocket, and Upay cash out charges, limits, and features. Find out which MFS provider is right for you in 2025.",
+  alternates: {
+    canonical: 'https://cashoutcalc.tech/blog/bkash-vs-nagad-vs-rocket-vs-upay-2025',
+  },
 };
 
 export default function BlogPost() {

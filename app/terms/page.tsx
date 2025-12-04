@@ -5,6 +5,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "Terms of Service | CashOutCalc.tech",
+  alternates: {
+    canonical: 'https://cashoutcalc.tech/terms',
+  },
 };
 
 export default function Terms() {

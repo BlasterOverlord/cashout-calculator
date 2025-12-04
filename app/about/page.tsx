@@ -5,6 +5,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "About Us | CashOutCalc.tech",
+  alternates: {
+    canonical: 'https://cashoutcalc.tech/about',
+  },
 };
 
 export default function About() {

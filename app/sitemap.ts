@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const blogPosts = [
-    'bkash-vs-nagad-vs-rocket-2025',
+    'bkash-vs-nagad-vs-rocket-vs-upay-2025',
     'how-to-save-on-cash-out-charges',
     'bkash-priyo-agent-guide',
   ].map((slug) => ({

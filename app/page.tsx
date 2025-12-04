@@ -39,6 +39,14 @@ const jsonLd = {
             "@type": "Answer",
             "text": "Currently, Nagad App is cheaper at approx 1.30% compared to bKash's standard 1.85%."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the cheapest way to cash out?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The absolute cheapest way is using Upay at UCB ATMs (0.8%) or Rocket at DBBL ATMs (0.9%)."
+          }
         }
       ]
     }
@@ -148,16 +156,24 @@ export default function Home() {
               <h3 className="font-semibold text-lg text-gray-900 mb-2">How much is the bKash Priyo Agent charge?</h3>
               <p className="leading-relaxed">
                 For a Priyo Agent, the charge is <strong className="text-gray-900">1.49%</strong> (14.90 Tk per 1,000).
-                This rate applies up to a monthly limit of 25,000-50,000 Tk depending on current policy.
-                After the limit, it reverts to 1.85%.
+                This rate applies up to a monthly limit of 50,000 Tk.
+                After the limit, it reverts to the standard 1.85%.
               </p>
             </div>
 
             <div>
               <h3 className="font-semibold text-lg text-gray-900 mb-2">Which is cheaper: bKash or Nagad?</h3>
               <p className="leading-relaxed">
-                Currently, <strong className="text-gray-900">Nagad App</strong> is cheaper at approx 1.30% compared to bKash&apos;s standard 1.85%.
-                However, bKash ATM Cash Out (via BRAC Bank/Q-Cash) is competitive at 1.49%.
+                Currently, <strong className="text-gray-900">Nagad App</strong> is cheaper at approx 1.30% (12.99 Tk + VAT) compared to bKash&apos;s standard 1.85%.
+                However, if you use bKash Priyo Agent or ATM Cash Out, the rate drops to 1.49%, making it very competitive.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-lg text-gray-900 mb-2">What is the cheapest way to cash out?</h3>
+              <p className="leading-relaxed">
+                The absolute cheapest way is using <strong className="text-gray-900">Upay at UCB ATMs</strong> (0.8% or 8 Tk/1000) or <strong className="text-gray-900">Rocket at DBBL ATMs</strong> (0.9% or 9 Tk/1000).
+                For agent withdrawals, Nagad App is the cheapest option.
               </p>
             </div>
 

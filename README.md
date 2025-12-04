@@ -1,6 +1,6 @@
 # 💸 BD Cash Out Calculator
 
-[Live Demo](https://cashoutcalc.tech/) • Progressive Web App (PWA) for accurately computing Bangladeshi Mobile Financial Service (MFS) cash‑out fees.
+[Live Demo](https://cashoutcalc.tech/) • Modern web app for accurately computing Bangladeshi Mobile Financial Service (MFS) cash‑out fees.
 
 > Traditional calculators still assume a flat 1.85%. This app implements current tiered and contextual fee rules (e.g., bKash Priyo Agent limits, Nagad channel differences, ATM withdrawal variability) to produce precise, explainable results.
 
@@ -27,7 +27,6 @@ This project encodes those rules with transparent, test‑backed logic so users 
 | 🛡️ Type-Safe | Strict TypeScript interfaces guard financial logic. |
 | 🧪 Unit Tested | Jest suites cover edge cases (boundary splits, rate transitions). |
 | 🎨 Dynamic Theming | Provider selection auto-adjusts brand palette for UI components. |
-| 📦 PWA | Installable, offline-capable shell for quick repeated use. |
 | 🚀 Fast Rendering | Next.js App Router + React Server Components for optimized payloads. |
 
 ---

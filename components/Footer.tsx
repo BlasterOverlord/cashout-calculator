@@ -5,6 +5,7 @@ export default function Footer() {
   return (
     <footer className="py-12 bg-white border-t border-gray-100 text-center mt-auto">
       <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm text-gray-600">
+        <Link href="/blog" className="hover:text-blue-600 transition-colors">Blog</Link>
         <Link href="/about" className="hover:text-blue-600 transition-colors">About Us</Link>
         <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact</Link>
         <Link href="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>

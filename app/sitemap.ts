@@ -18,6 +18,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  const staticPages = [
+    'about',
+    'contact',
+    'privacy',
+    'terms',
+    'blog',
+  ].map((route) => ({
+    url: `${baseUrl}/${route}`,
+    lastModified: new Date(),
+    changeFrequency: 'yearly' as const,
+    priority: 0.5,
+  }))
+
+  const blogPosts = [
+    'bkash-vs-nagad-vs-rocket-2025',
+    'how-to-save-on-cash-out-charges',
+    'bkash-priyo-agent-guide',
+  ].map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   // return the combined list
-  return [homeEntry, ...providerEntries]
+  return [homeEntry, ...providerEntries, ...staticPages, ...blogPosts]
 }

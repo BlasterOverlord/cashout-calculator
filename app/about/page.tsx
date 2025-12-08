@@ -51,7 +51,7 @@ export default function About() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>Government tax/VAT changes.</li>
-          <li>New "Priyo" number limits and conditions.</li>
+          <li>New &quot;Priyo&quot; number limits and conditions.</li>
           <li>Promotional rates for specific banks or ATMs.</li>
         </ul>
       </section>
@@ -59,10 +59,10 @@ export default function About() {
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4 text-gray-900">The Story Behind the Tool</h2>
         <p className="mb-4">
-          Calculating cash-out charges used to be simple: just multiply by 1.85%. But today, with Nagad's lower rates, bKash's Priyo numbers, and Rocket's ATM advantages, the math has become complicated.
+          Calculating cash-out charges used to be simple: just multiply by 1.85%. But today, with Nagad&apos;s lower rates, bKash&apos;s Priyo numbers, and Rocket&apos;s ATM advantages, the math has become complicated.
         </p>
         <p className="mb-4">
-          I built this tool because I found myself constantly Googling "bKash charge today" or opening the calculator app to figure out if I had enough balance. This platform solves that problem instantly for everyone.
+          I built this tool because I found myself constantly Googling &quot;bKash cash out charge&quot; and then manually calculating to figure out if I have enough balance on my wallet for this cash out. Not only was this troublesome but it was also error prone. This web app solves that problem instantly by calculating with the correct up-to-date rates and tiers.
         </p>
       </section>
 

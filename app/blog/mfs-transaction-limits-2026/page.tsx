@@ -16,7 +16,7 @@ export default function BlogPost() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Mobile Banking Transaction Limits 2026: bKash, Nagad, Rocket & Upay",
-    "datePublished": "2025-12-13",
+    "datePublished": "2025-12-10",
     "author": {
       "@type": "Organization",
       "name": "CashOutCalc Team"

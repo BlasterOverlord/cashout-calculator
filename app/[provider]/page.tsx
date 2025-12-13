@@ -168,6 +168,18 @@ export default async function ProviderPage({ params }: Props) {
 						})
 					}
 				</div>
+				<div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 text-center mt-12">
+					<h3 className="text-xl font-bold text-gray-900 mb-2">Want to save more on Cash Out fees?</h3>
+					<p className="text-gray-600 mb-4">
+						Check out our detailed guides and tips.
+					</p>
+					<Link 
+						href="/blog" 
+						className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+					>
+						Read Our Guides
+					</Link>
+				</div>
 			</div>
 
 			<Footer />

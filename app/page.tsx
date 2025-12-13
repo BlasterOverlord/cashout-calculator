@@ -69,7 +69,7 @@ export default function Home() {
           </h1>
           <p className="text-gray-600 text-lg max-w-xl mx-auto">
             Instantly calculate cash out fees for bKash, Nagad, Rocket & Upay.
-            Updated for <span className="font-semibold text-gray-800">2025</span>.
+            Updated for <span className="font-semibold text-gray-800">2026</span>.
           </p>
         </div>
 
@@ -78,9 +78,9 @@ export default function Home() {
 
       <section className="max-w-3xl mx-auto px-6 pt-12 space-y-8 text-gray-700">
         <div className="prose prose-blue max-w-none">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Complete Guide to MFS Cash Out Charges in Bangladesh (2025)</h2>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Complete Guide to MFS Cash Out Charges in Bangladesh (2026)</h2>
           <p className="text-lg leading-relaxed">
-            As we move through 2025, managing mobile financial service (MFS) costs in Bangladesh has become essential for daily financial planning. Whether you use <strong>bKash, Nagad, Rocket, or Upay</strong>, understanding the hidden layers of withdrawal fees can save you thousands of Taka annually.
+            As we move through 2026, managing mobile financial service (MFS) costs in Bangladesh has become essential for daily financial planning. Whether you use <strong>bKash, Nagad, Rocket, or Upay</strong>, understanding the hidden layers of withdrawal fees can save you thousands of Taka annually.
           </p>
           <br></br>
           <h3 className="text-xl font-bold text-gray-800">The Evolution of Cash Out Fees</h3>

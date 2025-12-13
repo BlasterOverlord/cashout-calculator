@@ -58,7 +58,7 @@ export default function BlogPost() {
             If you frequently use mobile financial services like bKash or Nagad, you know the pain of the &quot;Cash Out&quot; fee. Paying 18.50 Tk for every 1,000 Tk withdrawal adds up quickly. If you withdraw 20,000 Tk a month, that&apos;s nearly <strong>4,500 Tk per year</strong> just in fees!
           </p>
           <p className="text-lg leading-relaxed mb-8">
-            The good news? You don&apos;t have to pay the full price. Here are 5 proven strategies to cut your cash out costs in 2025.
+            The good news? You don&apos;t have to pay the full price. Here are 5 proven strategies to cut your cash out costs in 2026.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Always Use the App (Avoid USSD)</h2>
@@ -100,7 +100,7 @@ export default function BlogPost() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Use &quot;Send Money&quot; Instead</h2>
           <p className="mb-4">
-            Do you really need cash? In 2025, almost every shop, pharmacy, and grocery store accepts bKash or Nagad payments (&quot;Merchant Pay&quot;).
+            Do you really need cash? In 2026, almost every shop, pharmacy, and grocery store accepts bKash or Nagad payments (&quot;Merchant Pay&quot;).
           </p>
           <p className="mb-4">
             Merchant payments are usually <strong>free</strong> for the customer. Instead of cashing out money to buy groceries, pay the merchant directly. You save the entire 1.85% fee.

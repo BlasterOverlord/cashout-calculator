@@ -13,8 +13,22 @@ export const metadata = {
 
 const blogPosts = [
   {
-    slug: "bkash-vs-nagad-vs-rocket-vs-upay-2025",
-    title: "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2025?",
+    slug: "how-to-secure-bkash-nagad-account",
+    title: "5 Golden Rules to Keep Your bKash & Nagad Account Safe",
+    excerpt: "Protect your mobile wallet from scammers. Learn how to spot fake calls, secure your PIN, and what to do if you lose your phone.",
+    date: "December 11, 2025",
+    readTime: "4 min read"
+  },
+  {
+    slug: "mfs-transaction-limits-2026",
+    title: "Mobile Banking Transaction Limits 2026: bKash, Nagad, Rocket & Upay",
+    excerpt: "Updated daily and monthly transaction limits for bKash, Nagad, Rocket, and Upay. Know your Cash Out, Send Money, and Payment limits.",
+    date: "December 10, 2025",
+    readTime: "5 min read"
+  },
+  {
+    slug: "bkash-vs-nagad-vs-rocket-vs-upay-2026",
+    title: "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2026?",
     excerpt: "A complete comparison of cash out charges, limits, and features to help you decide which MFS provider saves you the most money.",
     date: "December 5, 2025",
     readTime: "6 min read"

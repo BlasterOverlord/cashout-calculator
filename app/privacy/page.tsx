@@ -22,7 +22,7 @@ export default function Privacy() {
 
                 <h1 className="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900">Privacy Policy</h1>
                 <div className="prose prose-blue max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <p className="text-sm text-gray-500 mb-6">Last updated: November 24, 2025</p>
+                    <p className="text-sm text-gray-500 mb-6">Last updated: December 13, 2025</p>
 
                     <p className="mb-4">
                         At CashOutCalc.tech, accessible from https://cashoutcalc.tech, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by CashOutCalc.tech and how we use it.

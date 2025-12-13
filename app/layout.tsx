@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "BD Cash Out Charge Calculator 2025 | bKash, Nagad, Rocket, Upay",
+    default: "BD Cash Out Charge Calculator 2026 | bKash, Nagad, Rocket, Upay",
     template: "%s | Cash Out BD"
   },
   description: "Calculate exact cash out charges for bKash, Nagad, Rocket, and Upay. Includes Priyo Agent rates, App vs USSD, and ATM fees.",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "rocket cash out charge",
     "upay withdrawal charge",
     "bkash priyo agent cash out charge",
-    "mobile banking charges bangladesh 2025",
+    "mobile banking charges bangladesh 2026",
     "cash out calculator bd",
     "bkash vs nagad cash out charges",
     "cheapest cash out charge bangladesh",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 const baseUrl = 'https://cashoutcalc.tech';
@@ -45,14 +46,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050260579669772"
-          crossOrigin="anonymous"></script>
       </head>
       <body className={inter.className}>
-
         {children}
-
         <Analytics />
+        <Script
+          id="adsbygoogle-init"
+          strategy="lazyOnload"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3050260579669772"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );

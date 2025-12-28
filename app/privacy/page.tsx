@@ -64,7 +64,7 @@ export default function Privacy() {
 
                     <h2 className="text-xl font-bold mt-8 mb-4 text-gray-900">Contact Us</h2>
                     <p className="mb-4">
-                        If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us via email at <strong>contact@cashoutcalc.tech</strong>.
+                        If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us via email at <strong>feedback@cashoutcalc.tech</strong>.
                     </p>
                 </div>
             </div>

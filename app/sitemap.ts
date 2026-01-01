@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { providers } from '@/utils/pricingData'
+import { blogPosts } from '@/utils/blogData'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cashoutcalc.tech'
@@ -17,6 +18,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
+  
+  const bp = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
 
   const staticPages = [
     'about',
@@ -30,20 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'yearly' as const,
     priority: 0.5,
   }))
-
-  const blogPosts = [
-    'how-to-secure-bkash-nagad-account',
-    'mfs-transaction-limits-2026',
-    'bkash-vs-nagad-vs-rocket-vs-upay-2026',
-    'how-to-save-on-cash-out-charges',
-    'bkash-priyo-agent-guide',
-  ].map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  
 
   // return the combined list
-  return [homeEntry, ...providerEntries, ...staticPages, ...blogPosts]
+  return [homeEntry, ...providerEntries, ...bp, ...staticPages]
 }

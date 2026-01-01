@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import HomeButton from "@/components/HomeButton";
-import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
@@ -30,15 +29,15 @@ export default function Privacy() {
 
                     <h2 className="text-xl font-bold mt-8 mb-4 text-gray-900">Log Files</h2>
                     <p className="mb-4">
-                        CashOutCalc.tech follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
+                        CashOutCalc.tech follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services&apos; analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&apos; movement on the website, and gathering demographic information.
                     </p>
 
                     <h2 className="text-xl font-bold mt-8 mb-4 text-gray-900">Google AdSense & Cookies</h2>
                     <p className="mb-4">
-                        Google uses cookies to help serve the ads it displays on the websites of its partners, such as websites displaying Google ads or participating in Google certified ad networks. When users visit a Google partner's website, a cookie may be dropped on that end user's browser.
+                        Google uses cookies to help serve the ads it displays on the websites of its partners, such as websites displaying Google ads or participating in Google certified ad networks. When users visit a Google partner&apos;s website, a cookie may be dropped on that end user&apos;s browser.
                     </p>
                     <p className="mb-4">
-                        Third party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.
+                        Third party vendors, including Google, use cookies to serve ads based on a user&apos;s prior visits to your website or other websites.
                     </p>
                     <p className="mb-4">
                         You have the option to opt-out of personalized advertising:

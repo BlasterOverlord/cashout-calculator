@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Calculator from '@/components/Calculator';
@@ -33,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const pageUrl = `https://cashoutcalc.tech/${resolvedParams.provider.toLowerCase()}`;
 
 	return {
-		title: provider.seoTitle || `${provider.name} Cash Out Charge Calculator 2026`,
+		title: provider.seoTitle || `${provider.name} Cash Out Charge Calculator`,
 		description: provider.description || `Calculate the exact cash out fee for ${provider.name} App and USSD. Check Priyo numbers, ATM charges, and monthly limits instantly.`,
 		alternates: {
 			canonical: pageUrl,
@@ -59,6 +58,7 @@ export default async function ProviderPage({ params }: Props) {
 
 	// Clean up markdown from features for Schema
 	const cleanFeatures = provider.uniqueFeatures?.map(f => f.replace(/\*\*/g, '')).join(', ');
+	const year = new Date().getFullYear();
 
 	return (
 		<main className="min-h-screen bg-gray-50">
@@ -97,7 +97,7 @@ export default async function ProviderPage({ params }: Props) {
 					</h1>
 					<p className="text-gray-600 text-lg max-w-xl mx-auto">
 						Calculate <span className="font-semibold">{provider.name}</span> fees for App, USSD, and ATM.
-						Updated for 2026.
+						Updated for <strong className="text-gray-800">{year}</strong>.
 					</p>
 				</div>
 
@@ -128,12 +128,12 @@ export default async function ProviderPage({ params }: Props) {
 				</div>
 
 				<article className="prose prose-blue max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-					<h2 className="text-2xl font-bold text-gray-900">Our Verdict on {provider.name}</h2>
+					<h2 className="text-2xl font-bold text-gray-900">Verdict on {provider.name}</h2>
 					<p className="leading-relaxed text-lg">
 						{provider.verdict}
 					</p>
 
-					<h3 className="text-xl font-semibold text-gray-800 mt-6">Regulatory Limits (2026)</h3>
+					<h3 className="text-xl font-semibold text-gray-800 mt-6">Regulatory Limits ({year})</h3>
 					<p>
 						Adhering to Bangladesh Bank regulations, {provider.name} enforces daily and monthly ceilings on cash-out transactions. While this calculator ensures you have the correct balance for fees, always ensure your transaction volume stays within the <strong>30,000 Tk daily</strong> (personal) limit to avoid transaction failures at the agent point.
 					</p>

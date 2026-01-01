@@ -2,6 +2,10 @@ import Link from 'next/link';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { blogPosts } from '@/utils/blogData';
+import { notFound } from 'next/navigation';
+
+const post = blogPosts.find(p => p.slug === 'bkash-priyo-agent-guide')!
 
 export const metadata = {
   title: "bKash Priyo Agent Guide 2026: How to Set & Save | CashOutCalc",
@@ -12,14 +16,19 @@ export const metadata = {
 };
 
 export default function BlogPost() {
+  if (!post) {
+    return notFound()
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "bKash Priyo Agent: Everything You Need to Know",
+    "headline": post.title,
     "datePublished": "2025-12-03",
+    "dateModified": post.lastModified,
     "author": {
       "@type": "Organization",
-      "name": "CashOutCalc Team"
+      "name": "CashOutCalc"
     },
     "description": "Step-by-step guide to setting up a bKash Priyo Agent number to reduce cash out charges."
   };
@@ -31,25 +40,27 @@ export default function BlogPost() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <HomeButton />
-      
+
       <article className="flex-grow max-w-3xl mx-auto px-6 py-12 md:py-20 font-sans text-gray-800">
         {/* Breadcrumb */}
-        <Breadcrumbs 
+        <Breadcrumbs
           items={[
             { label: 'Blog', href: '/blog' },
             { label: 'bKash Priyo Agent Guide' }
-          ]} 
-          className="mb-8" 
+          ]}
+          className="mb-8"
         />
 
         <header className="mb-10">
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            bKash Priyo Agent: Everything You Need to Know
+            {post.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-gray-500">
-            <span>December 3, 2025</span>
+            <time dateTime={post.lastModified} itemProp="dateModified">
+              {post.date}
+            </time>
             <span>•</span>
-            <span>3 min read</span>
+            <span>{post.readTime}</span>
           </div>
         </header>
 
@@ -107,7 +118,7 @@ export default function BlogPost() {
           </p>
         </div>
       </article>
-      
+
       <Footer />
     </main>
   );

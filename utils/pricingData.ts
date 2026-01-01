@@ -1,4 +1,5 @@
 import { ServiceProvider } from "./types";
+const year = new Date().getFullYear();
 
 export const providers: ServiceProvider[] = [
   {
@@ -19,7 +20,7 @@ export const providers: ServiceProvider[] = [
       },
       { method: "ATM", rate: 1.49 }
     ],
-    seoTitle: "bKash Cash Out Charge Calculator 2025 (Priyo Agent & ATM)",
+    seoTitle: `bKash Cash Out Charge Calculator ${year} (Official Rates)`,
     description: "Calculate your exact bKash cash out fees instantly. Unlike a flat rate, bKash charges vary between 1.85% (Regular) and 1.49% (Priyo Agent/ATM). Use this tool to see how much you can save by switching withdrawal methods.",
     uniqueFeatures: [
       "**Priyo Agent:** Withdraw up to 50,000 Tk per month at a reduced rate of 1.49% (14.90 Tk per thousand).",
@@ -40,7 +41,7 @@ export const providers: ServiceProvider[] = [
       { method: "App", rate: 1.299 },
       { method: "USSD", rate: 1.50 },
     ],
-    seoTitle: "Nagad Cash Out Charge Calculator 2025 (Lowest App Rate)",
+    seoTitle: `Nagad Cash Out Charge Calculator ${year} (Official Rates)`,
     description: "Find the cheapest way to withdraw money with our Nagad calculator. Nagad offers a unique advantage where using the App (~1.30%) is significantly cheaper than using USSD (*167#). Calculate your potential savings here.",
     uniqueFeatures: [
       "**Lowest App Charge:** At ~1.30% (12.99 Tk + VAT), it is the cheapest standard rate in the market.",
@@ -63,7 +64,7 @@ export const providers: ServiceProvider[] = [
       { method: "USSD", rate: 1.8 },
       { method: "ATM", rate: 0.9 },
     ],
-    seoTitle: "Rocket Cash Out Fee Calculator 2025 (DBBL ATM Rate)",
+    seoTitle: `Rocket Cash Out Fee Calculator ${year} (Official Rates)`,
     description: "Calculate Rocket withdrawal fees for App, USSD, and ATMs. Rocket is unique because its DBBL ATM withdrawal rate (0.9%) is half the cost of regular agents. Use this tool to see the massive difference in final costs.",
     uniqueFeatures: [
       "**Cheapest ATM Cash Out:** Only 0.9% (9 Tk per thousand) when using a DBBL ATM.",
@@ -86,7 +87,7 @@ export const providers: ServiceProvider[] = [
       { method: "USSD", rate: 1.4 },
       { method: "ATM", rate: 0.8 },
     ],
-    seoTitle: "Upay Cash Out Calculator 2025 (UCB ATM Rate)",
+    seoTitle: `Upay Cash Out Calculator ${year} (Official Rates)`,
     description: "Determine your Upay cash out costs instantly. Upay offers the market's lowest ATM fee at 0.8% (UCB ATMs). This calculator helps you verify these low rates against standard agent fees.",
     uniqueFeatures: [
       "**Lowest ATM Fee:** 0.8% (8 Tk per thousand) at UCB ATMs - the lowest in the industry.",

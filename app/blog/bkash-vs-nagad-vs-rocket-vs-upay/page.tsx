@@ -2,24 +2,33 @@ import Link from 'next/link';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { blogPosts } from '@/utils/blogData';
+import { notFound } from 'next/navigation';
+
+const post = blogPosts.find(p => p.slug === 'bkash-vs-nagad-vs-rocket-vs-upay')!
 
 export const metadata = {
   title: "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2026? | CashOutCalc",
   description: "A detailed comparison of bKash, Nagad, Rocket, and Upay cash out charges, limits, and features. Find out which MFS provider is right for you in 2026.",
   alternates: {
-    canonical: 'https://cashoutcalc.tech/blog/bkash-vs-nagad-vs-rocket-vs-upay-2026',
+    canonical: 'https://cashoutcalc.tech/blog/bkash-vs-nagad-vs-rocket-vs-upay',
   },
 };
 
 export default function BlogPost() {
+  if (!post) {
+      return notFound()
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2026?",
+    "headline": post.title,
     "datePublished": "2025-12-05",
+    "dateModified": post.lastModified,
     "author": {
       "@type": "Organization",
-      "name": "CashOutCalc Team"
+      "name": "CashOutCalc"
     },
     "description": "A detailed comparison of bKash, Nagad, Rocket, and Upay cash out charges, limits, and features."
   };
@@ -44,12 +53,14 @@ export default function BlogPost() {
 
         <header className="mb-10">
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            bKash vs Nagad vs Rocket vs Upay: Which is Best in 2026?
+            {post.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-gray-500">
-            <span>December 5, 2025</span>
+            <time dateTime={post.lastModified} itemProp="dateModified">
+              {post.date}
+            </time>
             <span>•</span>
-            <span>6 min read</span>
+            <span>{post.readTime}</span>
           </div>
         </header>
 

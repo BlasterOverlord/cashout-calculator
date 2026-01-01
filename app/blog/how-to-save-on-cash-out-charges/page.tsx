@@ -2,6 +2,10 @@ import Link from 'next/link';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { blogPosts } from '@/utils/blogData';
+import { notFound } from 'next/navigation';
+
+const post = blogPosts.find(p => p.slug === 'how-to-save-on-cash-out-charges')!
 
 export const metadata = {
   title: "5 Proven Ways to Save Money on Cash Out Charges | CashOutCalc",
@@ -12,14 +16,19 @@ export const metadata = {
 };
 
 export default function BlogPost() {
+  if (!post) {
+    return notFound()
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "5 Proven Ways to Save Money on Cash Out Charges",
+    "headline": post.title,
     "datePublished": "2025-12-04",
+    "dateModified": post.lastModified,
     "author": {
       "@type": "Organization",
-      "name": "CashOutCalc Team"
+      "name": "CashOutCalc"
     },
     "description": "Stop paying high fees. Learn how to use Priyo numbers, ATMs, and Apps to cut your mobile banking withdrawal fees by up to 50%."
   };
@@ -37,19 +46,21 @@ export default function BlogPost() {
         <Breadcrumbs 
           items={[
             { label: 'Blog', href: '/blog' },
-            { label: 'Save Money on Cash Out' }
+            { label: 'How to Save on Cash Out Charges' }
           ]} 
           className="mb-8" 
         />
 
         <header className="mb-10">
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            5 Proven Ways to Save Money on Cash Out Charges
+            {post.title}
           </h1>
           <div className="flex items-center gap-4 text-sm text-gray-500">
-            <span>December 4, 2025</span>
+            <time dateTime={post.lastModified} itemProp="dateModified">
+              {post.date}
+            </time>
             <span>•</span>
-            <span>4 min read</span>
+            <span>{post.readTime}</span>
           </div>
         </header>
 

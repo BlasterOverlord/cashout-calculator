@@ -21,7 +21,7 @@ export default function Terms() {
 
         <h1 className="text-3xl md:text-4xl font-extrabold mb-8 text-gray-900">Terms of Service</h1>
         <div className="prose prose-blue max-w-none bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-          <p className="text-sm text-gray-500 mb-8">Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+          <p className="text-sm text-gray-500 mb-8">Last updated: December 28, 2025</p>
 
           <h2 className="text-xl font-bold mt-4 mb-4 text-gray-900">1. Acceptance of Terms</h2>
           <p className="mb-4">

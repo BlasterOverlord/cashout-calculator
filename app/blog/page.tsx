@@ -2,6 +2,11 @@ import Link from 'next/link';
 import HomeButton from '@/components/HomeButton';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { blogPosts } from '@/utils/blogData';
+
+const sortedPosts = [...blogPosts].sort((a, b) => {
+    return new Date(b.lastModified).getTime() - new Date(a.lastModified).getTime();
+});
 
 export const metadata = {
   title: "Blog | CashOutCalc.tech",
@@ -10,44 +15,6 @@ export const metadata = {
     canonical: 'https://cashoutcalc.tech/blog',
   },
 };
-
-const blogPosts = [
-  {
-    slug: "how-to-secure-bkash-nagad-account",
-    title: "5 Golden Rules to Keep Your bKash & Nagad Account Safe",
-    excerpt: "Protect your mobile wallet from scammers. Learn how to spot fake calls, secure your PIN, and what to do if you lose your phone.",
-    date: "December 11, 2025",
-    readTime: "4 min read"
-  },
-  {
-    slug: "mfs-transaction-limits-2026",
-    title: "Mobile Banking Transaction Limits 2026: bKash, Nagad, Rocket & Upay",
-    excerpt: "Updated daily and monthly transaction limits for bKash, Nagad, Rocket, and Upay. Know your Cash Out, Send Money, and Payment limits.",
-    date: "December 10, 2025",
-    readTime: "5 min read"
-  },
-  {
-    slug: "bkash-vs-nagad-vs-rocket-vs-upay-2026",
-    title: "bKash vs Nagad vs Rocket vs Upay: Which is Best in 2026?",
-    excerpt: "A complete comparison of cash out charges, limits, and features to help you decide which MFS provider saves you the most money.",
-    date: "December 5, 2025",
-    readTime: "6 min read"
-  },
-  {
-    slug: "how-to-save-on-cash-out-charges",
-    title: "5 Proven Ways to Save Money on Cash Out Charges",
-    excerpt: "Stop paying 18.50 Tk per thousand. Learn how to use Priyo numbers, ATMs, and Apps to cut your withdrawal fees by up to 50%.",
-    date: "December 4, 2025",
-    readTime: "4 min read"
-  },
-  {
-    slug: "bkash-priyo-agent-guide",
-    title: "bKash Priyo Agent: Everything You Need to Know",
-    excerpt: "How to set a Priyo number, what the limits are, and how to get the reduced 1.49% cash out rate.",
-    date: "December 3, 2025",
-    readTime: "3 min read"
-  }
-];
 
 export default function BlogIndex() {
   return (
@@ -66,11 +33,11 @@ export default function BlogIndex() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
+          {sortedPosts.map((post) => (
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <article className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-full transition-all duration-300 hover:shadow-md hover:border-blue-200 flex flex-col">
                 <div className="mb-4 text-xs font-medium text-gray-400 flex justify-between items-center">
-                  <span>{post.date}</span>
+                  <time>{post.date}</time>
                   <span>{post.readTime}</span>
                 </div>
                 <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">

@@ -11,7 +11,7 @@ export default function Footer() {
         <Link href="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</Link>
       </div>
       <p className="text-xs text-gray-400">
-        © {new Date().getFullYear()} cashoutcalc.tech. Not affiliated with bKash, Nagad, Rocket or Upay.
+        © {new Date().getFullYear()} CashOutCalc. Not affiliated with bKash, Nagad, Rocket or Upay.
       </p>
     </footer>
   );

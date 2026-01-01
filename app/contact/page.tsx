@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
-  title: "Contact Us | CashOutCalc.tech",
+  title: "Contact",
   alternates: {
     canonical: 'https://cashoutcalc.tech/contact',
   },
@@ -17,16 +17,16 @@ export default function Contact() {
       {/* Breadcrumb Navigation */}
       <Breadcrumbs items={[{ label: 'Contact' }]} className="mb-8" />
 
-      <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
+      <h1 className="text-3xl font-bold mb-6">Contact</h1>
       <p className="mb-6 text-lg leading-relaxed">
-        We value your feedback! Whether you&apos;ve found a bug, have a feature suggestion, or want to report incorrect data, we&apos;re here to listen. This project relies on community input to stay accurate and useful.
+        This is a solo project and your feedback is what keeps it going. Whether you&apos;ve found a bug, have a feature suggestion, or want to report incorrect data, the project relies on community input to stay accurate and useful.
       </p>
       
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
           <h2 className="text-xl font-bold mb-4 text-gray-900">Get in Touch</h2>
           <p className="mb-4 text-gray-600">
-            For general inquiries, bug reports, or partnership opportunities, please email us directly. We aim to respond within 24-48 hours.
+            For general inquiries, bug reports, or partnership opportunities, please email directly. Typical response time is 24-48 hours.
           </p>
           <div className="flex items-center gap-3 text-blue-600 font-medium">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">

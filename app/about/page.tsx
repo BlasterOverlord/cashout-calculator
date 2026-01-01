@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
-  title: "About Us | CashOutCalc.tech",
+  title: "About | cashoutcalc.tech",
   alternates: {
     canonical: 'https://cashoutcalc.tech/about',
   },
@@ -16,13 +16,13 @@ export default function About() {
       <HomeButton />
       
       {/* Breadcrumb Navigation */}
-      <Breadcrumbs items={[{ label: 'About Us' }]} className="mb-8" />
+      <Breadcrumbs items={[{ label: 'About' }]} className="mb-8" />
 
-      <h1 className="text-3xl font-bold mb-6">About Us</h1>
+      <h1 className="text-3xl font-bold mb-6">About CashOutCalc</h1>
       
       <section className="mb-8">
         <p className="mb-4 text-lg leading-relaxed">
-          Welcome to <strong>Cash Out Calculator</strong>, the most comprehensive and up-to-date fee calculation tool for Mobile Financial Services (MFS) in Bangladesh. We simplify the complex fee structures of bKash, Nagad, Rocket, and Upay so you can make informed financial decisions.
+          <strong>CashOutCalc</strong> is a comprehensive and up-to-date fee calculation tool for Mobile Financial Services (MFS) in Bangladesh. The site simplifies the complex fee structures of bKash, Nagad, Rocket, and Upay so you can make informed financial decisions.
         </p>
         <p className="mb-4 text-lg leading-relaxed">
           Whether you are a student, a small business owner, or an everyday user, knowing the exact cash-out charge before you go to an agent can save you money and hassle.
@@ -30,24 +30,24 @@ export default function About() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">Our Mission</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Mission</h2>
         <p className="mb-4">
-          Our mission is to bring transparency to digital financial transactions in Bangladesh. With varying rates for App withdrawals, USSD codes (*247#, *167#, etc.), and ATM cash-outs, it is easy to lose track of how much money is actually being deducted.
+          My mission is to bring transparency to digital financial transactions in Bangladesh. With varying rates for App withdrawals, USSD codes (*247#, *167#, etc.), and ATM cash-outs, it is easy to lose track of how much money is actually being deducted.
         </p>
         <p className="mb-4">
-          We aim to provide:
+          The goal is to provide:
         </p>
         <ul className="list-disc pl-6 space-y-2 mb-4">
           <li><strong>Accuracy:</strong> Real-time calculations based on the latest official tariff charts.</li>
           <li><strong>Simplicity:</strong> A clean, no-nonsense interface that works fast on any device.</li>
-          <li><strong>Education:</strong> Clear explanations of "Priyo Agent" numbers, tiered pricing, and hidden VAT costs.</li>
+          <li><strong>Education:</strong> Clear explanations of &quot;Priyo Agent&quot; numbers, tiered pricing, and hidden VAT costs.</li>
         </ul>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4 text-gray-900">Why Trust Us?</h2>
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">Why Trust This Tool?</h2>
         <p className="mb-4">
-          We manually verify our data against the official websites and press releases of all major MFS providers. Our calculator is regularly updated to reflect:
+          Data is manually verified against the official websites and press releases of major MFS providers. The calculator is regularly updated to reflect:
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>Government tax/VAT changes.</li>
@@ -66,12 +66,20 @@ export default function About() {
         </p>
       </section>
 
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4 text-gray-900">About Me</h2>
+        <p className="mb-4">
+          I am a college student studying CSE, I built this tool to solve the problem of complex cash-out fee calculations in Bangladesh&apos;s MFS ecosystem. 
+          This is a solo project and I maintain it all by myself, donations are appreciated to keep up with the domain costs and to keep the project ad free.
+        </p>
+      </section>
+
       <section className="border-t pt-8">
         <p>
-          If you have any questions, suggestions, or partnership inquiries, please don&apos;t hesitate to
+          For questions, suggestions, or partnership inquiries, please
           {" "}
           <Link href="/contact" className="text-blue-600 hover:underline font-medium">
-            contact us
+            get in touch
           </Link>
           .
         </p>

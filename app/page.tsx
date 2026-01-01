@@ -86,7 +86,7 @@ export default function Home() {
           <br></br>
           <h3 className="text-xl font-bold text-gray-800">The Evolution of Cash Out Fees</h3>
           <p>
-            Gone are the days of a flat 1.85% fee across the board. Providers have introduced complex tiered pricing models to compete. For instance, bKash&apos;s <strong>&quot;Priyo Agent&quot;</strong> feature allows for a significantly reduced rate of 1.49% (14.90 Tk per 1,000), but this is strictly capped at a monthly limit. Our calculator is the first of its kind to factor in these &quot;split-tier&quot; scenarios, calculating exactly how much of your withdrawal falls under the cheap rate and how much spills over into the standard rate.
+            Gone are the days of a flat 1.85% fee across the board. Providers have introduced complex tiered pricing models to compete. For instance, bKash&apos;s <strong>&quot;Priyo Agent&quot;</strong> feature allows for a significantly reduced rate of 1.49% (14.90 Tk per 1,000), but this is strictly capped at a monthly limit. This calculator is built to factor in these &quot;split-tier&quot; scenarios, calculating exactly how much of your withdrawal falls under the cheap rate and how much spills over into the standard rate.
           </p>
           <br></br>
           <h3 className="text-xl font-bold text-gray-800">App vs. USSD: The Cost of Convenience</h3>
@@ -159,7 +159,7 @@ export default function Home() {
                 For a Priyo Agent, the charge is <strong className="text-gray-900">1.49%</strong> (14.90 Tk per 1,000).
                 This rate applies up to a monthly limit of 50,000 Tk.
                 After the limit, it reverts to the standard 1.85%.
-                Learn more in our <Link href="/blog/bkash-priyo-agent-guide" className="text-blue-600 hover:underline">bKash Priyo Agent Guide</Link>.
+                Learn more in the <Link href="/blog/bkash-priyo-agent-guide" className="text-blue-600 hover:underline">bKash Priyo Agent Guide</Link>.
               </p>
             </div>
 
@@ -168,7 +168,7 @@ export default function Home() {
               <p className="leading-relaxed">
                 Currently, <strong className="text-gray-900">Nagad App</strong> is cheaper at approx 1.30% (12.99 Tk + VAT) compared to bKash&apos;s standard 1.85%.
                 However, if you use bKash Priyo Agent or ATM Cash Out, the rate drops to 1.49%, making it very competitive.
-                See our full comparison: <Link href="/blog/bkash-vs-nagad-vs-rocket-vs-upay-2026" className="text-blue-600 hover:underline">bKash vs Nagad vs Rocket vs Upay 2026</Link>.
+                See the full comparison: <Link href="/blog/bkash-vs-nagad-vs-rocket-vs-upay-2026" className="text-blue-600 hover:underline">bKash vs Nagad vs Rocket vs Upay 2026</Link>.
               </p>
             </div>
 
@@ -177,7 +177,7 @@ export default function Home() {
               <p className="leading-relaxed">
                 The absolute cheapest way is using <strong className="text-gray-900">Upay at UCB ATMs</strong> (0.8% or 8 Tk/1000) or <strong className="text-gray-900">Rocket at DBBL ATMs</strong> (0.9% or 9 Tk/1000).
                 For agent withdrawals, Nagad App is the cheapest option.
-                Read our guide on <Link href="/blog/how-to-save-on-cash-out-charges" className="text-blue-600 hover:underline">How to Save on Cash Out Charges</Link>.
+                Read the guide on <Link href="/blog/how-to-save-on-cash-out-charges" className="text-blue-600 hover:underline">How to Save on Cash Out Charges</Link>.
               </p>
             </div>
 
@@ -199,13 +199,13 @@ export default function Home() {
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 text-center">
           <h3 className="text-xl font-bold text-gray-900 mb-2">Want to save more on Cash Out fees?</h3>
           <p className="text-gray-600 mb-4">
-            Check out our detailed guides and tips.
+            Browse detailed guides and tips.
           </p>
           <Link 
             href="/blog" 
             className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Read Our Guides
+            Read the Guides
           </Link>
         </div>
       </section>

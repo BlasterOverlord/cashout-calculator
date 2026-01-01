@@ -9,7 +9,7 @@ const sortedPosts = [...blogPosts].sort((a, b) => {
 });
 
 export const metadata = {
-  title: "Blog | CashOutCalc.tech",
+  title: "Blog",
   description: "Latest guides, comparisons, and tips for Mobile Financial Services (bKash, Nagad, Rocket, Upay) in Bangladesh.",
   alternates: {
     canonical: 'https://cashoutcalc.tech/blog',

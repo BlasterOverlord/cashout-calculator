@@ -20,8 +20,8 @@ export const providers: ServiceProvider[] = [
       },
       { method: "ATM", rate: 1.49 }
     ],
-    seoTitle: `bKash Cash Out Charge Calculator ${year} (Official Rates)`,
-    description: "Calculate your exact bKash cash out fees instantly (supports priyo agent). Unlike a flat rate, bKash charges vary between 1.85% (Regular) and 1.49% (Priyo Agent/ATM). Use this tool to see how much you can save by switching withdrawal methods.",
+    seoTitle: `bKash Cash Out Charge Calculator ${year}`,
+    description: "Calculate bKash cash out charges and withdrawal fees for Agent, Priyo Agent & ATM. Compare all methods side-by-side and find the cheapest option.",
     uniqueFeatures: [
       "**Priyo Agent:** Withdraw up to 50,000 Tk per month at a reduced rate of 1.49% (14.90 Tk per thousand).",
       "**ATM Withdrawal:** Cash out from any BRAC Bank or Q-Cash ATM at a flat 1.49% rate.",
@@ -41,8 +41,8 @@ export const providers: ServiceProvider[] = [
       { method: "App", rate: 1.299 },
       { method: "USSD", rate: 1.50 },
     ],
-    seoTitle: `Nagad Cash Out Charge Calculator ${year} (Official Rates)`,
-    description: "Find the cheapest way to withdraw money from Nagad. Nagad offers a unique advantage where using the App (~1.30%) is significantly cheaper than using USSD (*167#). Calculate your potential savings here.",
+    seoTitle: `Nagad Cash Out Charge Calculator ${year}`,
+    description: "Calculate Nagad cash out charges and withdrawal fees. Compare App vs USSD costs instantly and discover which method saves you the most money.",
     uniqueFeatures: [
       "**Lowest App Charge:** At ~1.30% (12.99 Tk + VAT), it is the cheapest standard rate in the market.",
       "**Islamic Wallet:** Offers a Shariah-compliant 'Nagad Islamic' account option.",
@@ -64,8 +64,8 @@ export const providers: ServiceProvider[] = [
       { method: "USSD", rate: 1.8 },
       { method: "ATM", rate: 0.9 },
     ],
-    seoTitle: `Rocket Cash Out Charge Calculator ${year} (Official Rates)`,
-    description: "Calculate Rocket withdrawal fees for App, USSD, and ATMs. Rocket is unique because its DBBL ATM withdrawal rate (0.9%) is half the cost of regular agents. Use this tool to see the massive difference in final costs.",
+    seoTitle: `Rocket Cash Out Charge Calculator ${year}`,
+    description: "Calculate Rocket cash out charges and ATM withdrawal fees. Compare Agent vs DBBL ATM costs and find the cheapest way to cash out.",
     uniqueFeatures: [
       "**Cheapest ATM Cash Out:** Only 0.9% (9 Tk per thousand) when using a DBBL ATM.",
       "**Salary Accounts:** Widely used by garment and corporate sectors for salary disbursement.",
@@ -87,8 +87,8 @@ export const providers: ServiceProvider[] = [
       { method: "USSD", rate: 1.4 },
       { method: "ATM", rate: 0.8 },
     ],
-    seoTitle: `Upay Cash Out Charge Calculator ${year} (Official Rates)`,
-    description: "Determine your Upay cash out costs instantly. Upay offers the market's lowest ATM fee at 0.8% (UCB ATMs). This calculator helps you verify these low rates against standard agent fees.",
+    seoTitle: `Upay Cash Out Charge Calculator ${year}`,
+    description: "Calculate Upay cash out charges and withdrawal fees for Agent & UCB ATM. Compare all methods and find the lowest cost option for you.",
     uniqueFeatures: [
       "**Lowest ATM Fee:** 0.8% (8 Tk per thousand) at UCB ATMs - the lowest in the industry.",
       "**No Hidden Charges:** Transparent pricing structure for all users.",

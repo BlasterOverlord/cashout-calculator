@@ -11,16 +11,16 @@ export const blogPosts = [
     slug: "mfs-transaction-limits", 
     title: `Mobile Banking Transaction Limits 2026: bKash, Nagad, Rocket & Upay`,
     excerpt: "Updated daily and monthly transaction limits for bKash, Nagad, Rocket, and Upay. Know your Cash Out, Send Money, and Payment limits.",
-    date: `January 1, 2026`,
-    lastModified: "2026-01-01",
+    date: `January 5, 2026`,
+    lastModified: "2026-01-05",
     readTime: "5 min read"
   },
   {
     slug: "bkash-vs-nagad-vs-rocket-vs-upay",
     title: `bKash vs Nagad vs Rocket vs Upay: Which is Best in 2026?`,
     excerpt: "A complete comparison of cash out charges, limits, and features to help you decide which MFS provider saves you the most money.",
-    date: `January 1, 2026`,
-    lastModified: "2026-01-01",
+    date: `January 18, 2026`,
+    lastModified: "2026-01-18",
     readTime: "6 min read"
   },
   {

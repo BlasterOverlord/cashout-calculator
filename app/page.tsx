@@ -168,7 +168,7 @@ export default function Home() {
               <p className="leading-relaxed">
                 Currently, <strong className="text-gray-900">Nagad App</strong> is cheaper at approx 1.30% (12.99 Tk + VAT) compared to bKash&apos;s standard 1.85%.
                 However, if you use bKash Priyo Agent or ATM Cash Out, the rate drops to 1.49%, making it very competitive.
-                See the full comparison: <Link href="/blog/bkash-vs-nagad-vs-rocket-vs-upay-2026" className="text-blue-600 hover:underline">bKash vs Nagad vs Rocket vs Upay 2026</Link>.
+                See the full comparison: <Link href="/blog/bkash-vs-nagad-vs-rocket-vs-upay" className="text-blue-600 hover:underline">bKash vs Nagad vs Rocket vs Upay 2026</Link>.
               </p>
             </div>
 
@@ -186,7 +186,7 @@ export default function Home() {
               <p className="leading-relaxed">
                 For most personal accounts, the daily cash-out limit is <strong className="text-gray-900">30,000 Tk </strong>
                 and the monthly limit is <strong className="text-gray-900">2,00,000 Tk</strong>.
-                For a detailed breakdown, check our <Link href="/blog/mfs-transaction-limits-2026" className="text-blue-600 hover:underline">MFS Transaction Limits 2026</Link> guide.
+                For a detailed breakdown, check our <Link href="/blog/mfs-transaction-limits" className="text-blue-600 hover:underline">MFS Transaction Limits 2026</Link> guide.
               </p>
             </div>
           </div>

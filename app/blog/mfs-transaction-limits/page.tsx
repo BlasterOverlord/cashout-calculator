@@ -24,7 +24,7 @@ export default function BlogPost() {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
-    "datePublished": "2025-12-10",
+    "datePublished": "2026-01-05",
     "dateModified": post.lastModified,
     "author": {
       "@type": "Organization",

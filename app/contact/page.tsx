@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "Contact",
+  description: "Get in touch with the CashOutCalc developer for feedback, suggestions, or advertising inquiries.",
   alternates: {
     canonical: 'https://cashoutcalc.tech/contact',
   },

@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "About | cashoutcalc.tech",
+  description: "Learn about CashOutCalc, the most comprehensive MFS fees and cash-out charge calculator in Bangladesh.",
   alternates: {
     canonical: 'https://cashoutcalc.tech/about',
   },

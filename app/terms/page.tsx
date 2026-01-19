@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
   title: "Terms of Service",
+  description: "Terms and conditions for using the CashOutCalc mobile financial service calculator.",
   alternates: {
     canonical: 'https://cashoutcalc.tech/terms',
   },

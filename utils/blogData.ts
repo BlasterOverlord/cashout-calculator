@@ -8,6 +8,14 @@ export const blogPosts = [
     readTime: "4 min read"
   },
   {
+    slug: "bank-transfer-vs-cash-out",
+    title: "Bank Transfer vs Cash Out: The Secret Way to Withdraw Money for Less",
+    excerpt: "Discover how transferring money to your bank account can save you significantly more than regular agent cash outs. Compare fees and speed.",
+    date: "February 16, 2026",
+    lastModified: "2026-02-16",
+    readTime: "8 min read"
+  },
+  {
     slug: "mfs-transaction-limits", 
     title: `Mobile Banking Transaction Limits 2026: bKash, Nagad, Rocket & Upay`,
     excerpt: "Updated daily and monthly transaction limits for bKash, Nagad, Rocket, and Upay. Know your Cash Out, Send Money, and Payment limits.",
